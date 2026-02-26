@@ -10,14 +10,23 @@ data = {
 df = pd.DataFrame(data)
 print("Sample DataFrame:")
 print(df)
-'''
-#df.fillna(value, inplace=True
-df['Age'].fillna(df['Age'].mean(), inplace=True)
-df['Salary'].fillna(df['Salary'].mean(), inplace=True)
+
+#df.fillna(value, inplace=True)
+# avoid chained-assignment warnings by assigning back to the column
+# or operate on the whole DataFrame
+df['Age'] = df['Age'].fillna(df['Age'].mean())
+df['Salary'] = df['Salary'].fillna(df['Salary'].mean())
+print("Age and Salary:")
 print(df)
-'''
-#linear, polynamial, time
-df.interpolate(method="linear", axis=1, inplace=True)
+
+# interpolate only numeric columns (axis=0 is the default) –
+# axis=1 tries to treat each row as a series and fails because
+# non-numeric columns are present and dtype becomes object
+# the original DataFrame has no NaNs left in numeric cols anyway
+num = df.select_dtypes(include='number')
+num = num.interpolate(method="linear")
+# put the results back if you need them:
+df[num.columns] = num
 print(df)
 
 """

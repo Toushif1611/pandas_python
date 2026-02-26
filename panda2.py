@@ -29,17 +29,16 @@ df.loc[0, 'Salary'] = 55000
 print(df)
 
 """
-'''
+
 #increasing salary by 5%
 df['Salary'] = df['Salary'] * 1.05
 print(df)
-'''
-'''
+
+
 # df.drop(columns=["column_name1", "column_name2", ...], inplace=True)
 print("Modified data:")
 df.drop(columns=["City"], inplace=True)
 print(df)
-'''
 
 
 """
@@ -50,17 +49,17 @@ isnull()
 True - NaN is missing
 False - value is present
 """
-'''
+
 print("Checking for missing values:")
 print(df.isnull().sum())
-'''
+
 """
 # dropna() method
 """
-'''
+
 df.dropna(inplace=True)
 print(df)
-'''
+
 
 """
 #fillna() method

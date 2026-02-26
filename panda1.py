@@ -1,5 +1,5 @@
 import pandas as pd
-'''
+
 data = {
     "name": ["Alice", "Bob", "Charlie", "David"],
     "age": [24, 30, 22, 35],
@@ -9,7 +9,7 @@ data = {
 
 df = pd.DataFrame(data)
 print(df)
-'''
+
 #df.to_csv("people.csv", index=False)
 
 #df.to_excel("people.xlsx", index=False)
@@ -20,14 +20,14 @@ print(df)
 2- identify the problems
 3- plan next steps
 """
-'''
+
 #head(n) first 5 rows by default
 # tail(n) last 5 rows by default
 df = pd.read_csv("people.csv")
 print(df.head())
 print(df.tail())
 
-'''
+
 """
 1- column, rows
 2- what type of data
@@ -41,11 +41,11 @@ info() method
 4- not null counts
 5- memory usage of the DataFrame
 """
-'''
+
 df = pd.read_csv("people.csv")
 print("displaying info")
 print(df.info())
-'''
+
 
 data = {
     "Name": ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hannah"],
@@ -55,27 +55,27 @@ data = {
     "City": ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Seattle", "Boston", "Miami"]
 }
 
-'''
+
 df = pd.DataFrame(data)
 print("Sample DataFrame:")
 print(df)
 
 print("Descriptive statistics:")
 print(df.describe())
-'''
+
 """
 1- how big id your data set
 2- what are the names of columns
 
 shape and columns attributes
 """
-'''
+
 df = pd.DataFrame(data)
 print(df)
 print(f'shape : {df.shape}')
 print(f'columns : {df.columns}')
 
-'''
+
 """
 1- select specific columns
 2- filter rows based on conditions
@@ -100,7 +100,7 @@ filtered_df = df[df["column_name"] > value]
 #combining multiple conditions
 filtered_df = df[(df["col1"] > value1) & (df["col2"] < value2)]
 """
-'''
+
 df = pd.DataFrame(data)
 print("Sample DataFrame:")
 print(df)   
@@ -113,7 +113,6 @@ subset = df[["Name", "Salary", "Age"]]
 print("Selected 'Name', 'Salary' and 'Age' columns:")
 print(subset)
 
-'''
 
 df = pd.DataFrame(data)
 print("Sample DataFrame:")

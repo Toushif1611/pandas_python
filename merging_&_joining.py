@@ -1,7 +1,7 @@
 #pd.merge(df1, df2, on="COlumn_Name", how="type_of_join")
 import pandas as pd
 
-'''#customer dataframe
+#customer dataframe
 df_customers = pd.DataFrame({
     'CustomerID':[1,2,3],
     'Name':['Ramesh', 'Suresh', 'Kalpesh']
@@ -12,11 +12,11 @@ df_orders = pd.DataFrame({
     'CustomerID':[1,2,4],
     'OrderAmount':[250, 450, 350]
 })
-'''
-'''#merge
+
+#merge
 df_merged = pd.merge(df_customers, df_orders, on='CustomerID', how='cross')
 print("Cross Join:")
-print(df_merged)'''
+print(df_merged)
 
 """
 #cross join

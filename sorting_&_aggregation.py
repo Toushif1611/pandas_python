@@ -13,28 +13,31 @@ data ={
 
 df = pd.DataFrame(data)
 print(df)
-'''
+
 df.sort_values(by="Age", ascending=True, inplace=True)
 print("Sorting age by Descending order")
 print(df)
-'''
-'''
-df.sort_values(by=["Age", "Salary"], ascending=[True, False], inplace=True)
-print(df)
-'''
 
-'''df["column Name"].sum()
+
+df.sort_values(by=["Age", "Salary"], ascending=[True, False], inplace=True)
+print("Age and Salary")
+print(df)
+
+
+"""
+df["column Name"].sum()
 df["column Name"].min()
 df["column Name"].max()
-df["column Name"].mean()'''
-'''
+df["column Name"].mean()
+"""
+
 avg_salary = df['Salary'].mean()
 print("Average Salary:", avg_salary)
-'''
 
-'''grouped = df.groupby("Age")["Salary"].sum()
+
+grouped = df.groupby("Age")["Salary"].sum()
 print(grouped)
-'''
+
 """df.groupby("Age")
 age = 22 > [45000]
 age = 28 [50000, 40000]
