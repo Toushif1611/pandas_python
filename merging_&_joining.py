@@ -14,7 +14,7 @@ df_orders = pd.DataFrame({
 })
 
 #merge
-df_merged = pd.merge(df_customers, df_orders, on='CustomerID', how='cross')
+df_merged = pd.merge(df_customers, df_orders, on='CustomerID', how='inner')
 print("Cross Join:")
 print(df_merged)
 
